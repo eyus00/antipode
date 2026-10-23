@@ -2,8 +2,6 @@
 
 A self-contained pipeline that uses historical Yahoo Finance futures data, turns a **carbon-aware long/short portfolio selection** problem into a **QUBO / Ising** model, and solves it classically and with local QAOA:
 
-<video src="https://github.com/eyus00/antipode/raw/refs/heads/main/media/antipode-dashboard-showcase.MP4" width="100%" controls autoplay muted loop></video>
-
 
 1. **Exact classical brute force** (the ground-truth reference),
 2. **Local QAOA simulation** with [Qrisp](https://qrisp.eu).
