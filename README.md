@@ -6,6 +6,10 @@ A self-contained pipeline that uses historical Yahoo Finance futures data, turns
 1. **Exact classical brute force** (the ground-truth reference),
 2. **Local QAOA simulation** with [Qrisp](https://qrisp.eu).
 
+<p align="center">
+  <img src="media/antipode-demo.gif" alt="Antipode dashboard demo: generate futures data, configure an IQM Resonance run, and view the selected long/short portfolio" width="800">
+</p>
+
 Use `python qfhackathon.py demo` (or `python qfhackathon.py dashboard`) to open the Antipode dashboard. The dashboard starts without solving a portfolio: if the data is missing, choose **Generate futures dataset** in the page, then run local QAOA or configure an IQM Resonance run. This keeps every demonstration step visible and avoids pre-filled results from an earlier run.
 
 ---
@@ -88,6 +92,8 @@ A bitstring is **feasible** only if exactly `k` long bits are set, exactly `k` s
 │   ├── app.js                # Fetches /api/state, renders it, wires up the buttons
 │   ├── styles.css            # Main styling (also @imports Google Fonts)
 │   └── showcase.css          # Responsive presentation dashboard refinements
+├── media/
+│   └── antipode-demo.gif     # Demo recording shown at the top of this README
 ├── data/                     # Generated data and results (see section 10)
 │   ├── prices.csv
 │   ├── returns.csv
@@ -597,16 +603,3 @@ These come from reading the code; they're worth knowing before presenting result
 10. **Sample data is a snapshot.** The bundled prices, returns and metadata are historical snapshots; local QAOA runs overwrite the saved dashboard result.
 
 ---
-
-## 15. Suggested repository cleanup
-
-- Add a `.gitignore`:
-  ```
-  __pycache__/
-  .venv/
-  .DS_Store
-  *.pyc
-  ```
-- Remove the committed `__pycache__/` and `.DS_Store` (`git rm -r --cached __pycache__ .DS_Store`).
-- Pin dependency versions once a working environment is found.
-- Decide whether `data/` (about 1.2 MB of regenerable CSVs and results) should be committed or generated on demand.
