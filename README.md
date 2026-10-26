@@ -1,4 +1,4 @@
-# Antipode — Carbon-Aware Futures Hedging with QAOA
+# Antipode
 
 A self-contained pipeline that uses historical Yahoo Finance futures data, turns a **carbon-aware long/short portfolio selection** problem into a **QUBO / Ising** model, and solves it classically and with local QAOA:
 
@@ -30,7 +30,6 @@ Use `python qfhackathon.py demo` (or `python qfhackathon.py dashboard`) to open 
 12. [Scaling and practical limits](#12-scaling-and-practical-limits)
 13. [Troubleshooting](#13-troubleshooting)
 14. [Known limitations and quirks](#14-known-limitations-and-quirks)
-15. [Suggested repository cleanup](#15-suggested-repository-cleanup)
 
 ---
 
